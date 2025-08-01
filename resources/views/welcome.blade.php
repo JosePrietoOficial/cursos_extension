@@ -30,10 +30,10 @@
                         </div>
                     </div>
 
-                    <button class="button" type="submit">Enviar</button>
+                    <button class="button" type="submit">Ingresar</button>
                 </form>
                 <div class="form-info">
-                    <a href="">Crear Usuario - Estudiante</a> &nbsp;|&nbsp; <a href="">Crear Usuario - Docente</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu contraseña?</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu usuario?</a>
+                    <a href="{{route('registro-user')}}">Crear Usuario - Estudiante</a> &nbsp;|&nbsp; <a href="">Crear Usuario - Docente</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu contraseña?</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu usuario?</a>
                 </div>
             </fieldset>
         </div>

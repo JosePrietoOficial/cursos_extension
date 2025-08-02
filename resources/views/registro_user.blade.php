@@ -3,6 +3,7 @@
 @section('meta')
     <link rel="stylesheet" href="{{asset('css/welcome.css') }}">
     <link rel="stylesheet" href="{{asset('css/registros.css') }}">
+    <script src="{{asset('js/preview_foto.js') }}"></script>
 @endsection
 
 @section('contents')
@@ -35,9 +36,12 @@
                         </div>
 
                         <div class="columna-input">
-                            <div class="custom-upload-file">
+                            <label class="custom-upload-file" for="image">
                                 <span class="custom-upload-message">Seleccionar un archivo</span>
-                                <input class="input" id="image" type="file" placeholder="Selecciona una imagen">
+                                <input class="input" id="image" name="image" type="file" accept="image/*" style="display: none;" onchange="mostrarVistaPrevia(this)">                            
+                            </label>
+                            <div id="imagen-preview" style="margin: 10px 0; text-align: center; display: none;">
+                                <img id="preview" src="#" alt="Vista previa de la imagen" style="max-width: 200px; max-height: 200px; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
                             </div>
                             <input class="input" id="name" type="text" required placeholder="José Alejandro">
                             <input class="input" id="last_name" type="text" required placeholder="Prieto Salcedo">

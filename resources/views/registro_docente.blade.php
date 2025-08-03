@@ -33,27 +33,28 @@
                             <label class="label" for="documento"> Documento: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
                             <label class="label" for="asignatura"> Asignatura: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
                             <label class="label" for="password"> Contraseña: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
+                            <label class="label" for="password_confirmation"> Confirmar contraseña: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
                         </div>
 
                         <div class="columna-input">
                             <label class="custom-upload-file" for="image">
                                 <span class="custom-upload-message">Seleccionar un archivo</span>
-                                <input class="input" id="image" name="image" type="file" accept="image/*" style="display: none;" onchange="mostrarVistaPrevia(this)">                            
+                                <input class="input" id="image" name="imagen" type="file" accept="image/*" style="display: none;" onchange="mostrarVistaPrevia(this)">                            
                             </label>
                             <div id="imagen-preview" style="margin: 10px 0; text-align: center; display: none;">
                                 <img id="preview" src="#" alt="Vista previa de la imagen" style="max-width: 200px; max-height: 200px; border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
                             </div>
-                            <input class="input" id="name" type="text" required placeholder="José Alejandro">
-                            <input class="input" id="last_name" type="text" required placeholder="Prieto Salcedo">
-                            <input class="input" id="email" type="email" required placeholder="ejemplo@corsaje.edu.co">
-                            <input class="input" id="phone" type="text" required placeholder="12345678">
-                            <input class="input extenso" id="fecha_nacimiento" type="date" required>
+                            <input class="input" name="name" id="name" type="text" required placeholder="José Alejandro">
+                            <input class="input" name="last_name" id="last_name" type="text" required placeholder="Prieto Salcedo">
+                            <input class="input" name="email" id="email" type="email" required placeholder="ejemplo@corsaje.edu.co">
+                            <input class="input" name="phone" id="phone" type="text" required placeholder="12345678">
+                            <input class="input extenso" name="fecha_nacimiento" id="fecha_nacimiento" type="date" required>
                             <select class="input extenso" name="tipo_documento" id="tipo_documento" required>
                                 <option value="" disabled selected>Tipo de documento</option>
                                 <option value="cc">Cédula de Ciudadanía</option>
                                 <option value="ce">Cédula de Extranjería</option>
                             </select>
-                            <input class="input" id="documento" type="text" required placeholder="12345678">
+                            <input class="input" name="documento" id="documento" type="text" required placeholder="12345678">
                             <select class="input" name="asignatura" id="asignatura" required>
                                 <option value="" disabled selected>Seleccione su asignatura</option>
                                 <option value="edicacion_tecnica">Educación Técnica</option>
@@ -64,8 +65,9 @@
                                 <option value="matematicas">Matemáticas</option>
                                 <option value="ingles">Inglés</option>
                             </select>
-                            <input class="input" id="password" type="password" required placeholder="Contraseña">
-                            <input type="text" value="docente" id="role" name="role" hidden>
+                            <input class="input" name="password" id="password" type="password" required placeholder="Contraseña">
+                            <input class="input" name="password_confirmation" id="password_confirmation" type="password" required placeholder="Confirmar contraseña">
+                            <input class="input" type="text" value="docente" id="role" name="role" hidden>
                         </div>
                     </div>
                     <div class="navegacion">

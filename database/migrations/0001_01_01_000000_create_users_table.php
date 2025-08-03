@@ -32,9 +32,9 @@ return new class extends Migration
             // Campo para diferenciar el tipo de usuario
             $table->enum('role', ['estudiante', 'docente']);
             
-            // Campos específicos (no pueden ser nulos)
-            $table->string('grado'); // Solo para estudiantes
-            $table->string('asignatura'); // Solo para docentes
+            // Campos específicos (pueden ser nulos)
+            $table->string('grado')->nullable(); // Solo para estudiantes
+            $table->string('asignatura')->nullable(); // Solo para docentes
         });
 
         // Las demás tablas (password_reset_tokens y sessions) se mantienen igual

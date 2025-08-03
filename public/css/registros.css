@@ -48,3 +48,7 @@ input[type="file"]{
     align-items: center;
     font-size: 12px;
 }
+
+.confirm_password{
+    margin-top: 10px;
+}

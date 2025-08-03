@@ -18,7 +18,7 @@
                 <form name="frm_login" id="frm_login" action="{{route('login')}}" method="post" enctype="multipart/form-data">
 
                     @csrf <!-- Token de seguridad -->
-                    <p class="titulo-sub-form">¡Descubre todos los beneficios que ofrece nuestro sistema para ti ahora!</p>
+                    <p class="titulo-sub-form">Administra tus preinscripciones y descubre los cursos extra curriculares que ofrece nuestra institución.</p>
                     <div class="columnas">
                         <div class="columna-label">
                             <label class="label" for="login"> Correo: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
@@ -33,7 +33,7 @@
                     <button class="button" type="submit">Ingresar</button>
                 </form>
                 <div class="form-info">
-                    <a href="{{route('registro-user')}}">Crear Usuario - Estudiante</a> &nbsp;|&nbsp; <a href="">Crear Usuario - Docente</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu contraseña?</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu usuario?</a>
+                    <a href="{{route('registro-user')}}">Crear Usuario - Estudiante</a> &nbsp;|&nbsp; <a href="{{route('registro-docente')}}">Crear Usuario - Docente</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu contraseña?</a> &nbsp;|&nbsp; <a href="">¿Olvidaste tu usuario?</a>
                 </div>
             </fieldset>
         </div>

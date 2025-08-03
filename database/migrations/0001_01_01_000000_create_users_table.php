@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
+            // Campos básicos de autenticación
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
@@ -19,8 +20,24 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+            // Campos comunes a ambos tipos de usuarios
+            $table->string('last_name');
+            $table->string('phone');
+            $table->date('fecha_nacimiento');
+            $table->enum('tipo_documento', ['cc', 'ce', 'ti']);
+            $table->string('documento')->unique();
+            $table->string('imagen')->nullable();
+            
+            // Campo para diferenciar el tipo de usuario
+            $table->enum('role', ['estudiante', 'docente']);
+            
+            // Campos específicos (no pueden ser nulos)
+            $table->string('grado'); // Solo para estudiantes
+            $table->string('asignatura'); // Solo para docentes
         });
 
+        // Las demás tablas (password_reset_tokens y sessions) se mantienen igual
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');

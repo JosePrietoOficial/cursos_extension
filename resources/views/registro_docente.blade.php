@@ -17,10 +17,10 @@
             <p class="titulo-sub">Por favor ingresa tus datos de usuario para iniciar sesión.</p>
             <fieldset class="fieldset-login">
                 <legend>Inicia sesión</legend>
-                <form name="frm_login" id="frm_login" action="{{route('register.user')}}" method="post" enctype="multipart/form-data">
+                <form name="frm_login" id="frm_login" action="{{route('register.docente')}}" method="post" enctype="multipart/form-data">
 
                     @csrf <!-- Token de seguridad -->
-                    <p class="titulo-sub-form">Registra tus datos para empezar a disfrutar del sistema</p>
+                    <p class="titulo-sub-form">¡Descubre todos los beneficios que ofrece nuestro sistema para ti como docente!</p>
                     <div class="columnas">
                         <div class="columna-label">
                             <label class="label" for="image"> Imagen: <span class="required-asterisk" style="color: #3276a3">*<span class="tooltip">Este campo es opcional</span></span></label>
@@ -31,7 +31,7 @@
                             <label class="label" for="fecha_nacimiento"> Fecha de nacimiento: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
                             <label class="label" for="tipo_documento"> Tipo de documento: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
                             <label class="label" for="documento"> Documento: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
-                            <label class="label" for="asignatura"> Grado: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
+                            <label class="label" for="asignatura"> Asignatura: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
                             <label class="label" for="password"> Contraseña: <span class="required-asterisk">*<span class="tooltip">Este campo es obligatorio</span></span></label>
                         </div>
 
@@ -50,24 +50,22 @@
                             <input class="input extenso" id="fecha_nacimiento" type="date" required>
                             <select class="input extenso" name="tipo_documento" id="tipo_documento" required>
                                 <option value="" disabled selected>Tipo de documento</option>
-                                <option value="ti">Tarjeta de Identidad</option>
                                 <option value="cc">Cédula de Ciudadanía</option>
                                 <option value="ce">Cédula de Extranjería</option>
                             </select>
                             <input class="input" id="documento" type="text" required placeholder="12345678">
                             <select class="input" name="asignatura" id="asignatura" required>
-                                <option value="" disabled selected>Seleccione su grado educativo</option>
-                                <option value="4">Cuarto Grado</option>
-                                <option value="5">Quinto Grado</option>
-                                <option value="6">Sexto Grado</option>
-                                <option value="7">Septimo Grado</option>
-                                <option value="8">Octavo Grado</option>
-                                <option value="9">Noveno Grado</option>
-                                <option value="10">Decimo Grado</option>
-                                <option value="11">Undecimo Grado</option>
+                                <option value="" disabled selected>Seleccione su asignatura</option>
+                                <option value="edicacion_tecnica">Educación Técnica</option>
+                                <option value="educacion_fisica">Educación Física</option>
+                                <option value="ciencias_sociales">Ciencias Sociales</option>
+                                <option value="ciencias_naturales">Ciencias Naturales</option>
+                                <option value="lengua_castellana">Lengua Castellana</option>
+                                <option value="matematicas">Matemáticas</option>
+                                <option value="ingles">Inglés</option>
                             </select>
                             <input class="input" id="password" type="password" required placeholder="Contraseña">
-                            <input type="text" value="estudiante" id="role" name="role" hidden>
+                            <input type="text" value="docente" id="role" name="role" hidden>
                         </div>
                     </div>
                     <div class="navegacion">
